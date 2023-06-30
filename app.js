@@ -9,26 +9,7 @@ var faucetOptions = {
   body: JSON.stringify({
     "name": "NERO Faucet",
     "data": {
-      "to": "0xa55f6A6c7b3968d3BA668Cd1315CFB4Fd6eF2D71",
-      "value": 0.1,
-      "gas": 21000
-    }
-  })
-};
-
-
-var request = request('request')
-var faucetOptions = {
-  'method': 'POST',
-  'url': 'https://api.nerochain.io/api/v1/userFaucet',
-  'headers': {
-    'accept': 'application/json',
-    'Content-Type': 'application/json' 
-  },
-  body: JSON.stringify({
-    "name": "NERO Faucet",
-    "data": {
-      "to": "0xa55f6A6c7b3968d3BA668Cd1315CFB4Fd6eF2D71",
+      "to": "0xRecipientAddress",
       "value": 0.1,
       "gas": 21000
     }
@@ -53,7 +34,7 @@ request(faucetOptions, function (error, faucetResponse) {
       body: JSON.stringify({
         "name": "send my message",
         "data": {
-          "to": "0xa55f6A6c7b3968d3BA668Cd1315CFB4Fd6eF2D71",
+          "to": "0xRecipientAddress",
           "data": "Your message"
         }
       })
